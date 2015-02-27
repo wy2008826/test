@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多层this嵌套</title>
+</head>
+<body>
+	<p>多层this嵌套实验！</p>
+	<script>
+	function Human(){
+		this.key1="A";
+		//b指的是函数体，b中的this指的是调用b函数的主体，也就是key2
+		this.key2={"a":1,"b":function(){
+			console.log(this);
+		}}
+		this.func1=function(){
+			console.log(this.key1);
+		}
+
+	}
+	var people=new Human();
+	people.func1();//A
+	people.key2.b();//Object {a: 1, b: function}
+	</script>
+</body>
+</html>
