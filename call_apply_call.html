@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多层this嵌套</title>
+</head>
+<body>
+
+	<script>
+        var name = 'global';
+        var person = {
+            name: 'zero'
+        };
+        // 输出姓名、年龄和职业
+        function printInfo(age, job) {
+            console.log(this.name, age, job);
+        }
+        // 直接调用
+        printInfo(20, '前端工程师');
+        // 打印：global 20 前端工程师
+        // 因为默认的上下文是window，所以this.name是全局定义的global，如果我们想打印出来zero的话，就需要改变函数执行的上下文
+        printInfo.call(person, 20, '前端工程师');
+        printInfo.apply(person, [20, '前端工程师']);
+        // 这两种方式是一样的，第一个参数都是传进去的上下文，this.name取的是person.name，所以打印出来的名字就是zero了，后面的为age和job，只是参数传递的方式不一样，apply比较特殊，把要传的参数放在数组里面
+        // 而bind和以上两种有区别，bind是es5定义的新方法，用来返回一个有自己上下文的函数，用法也比较类似：
+        printInfo.bind(person)(20, '前端工程师');
+        // printInfo.bind(person)这一块是返回的以peron为上下文的函数，后面的(20, '前端工程师')是函数调用
+	</script>
+</body>
+</html>
