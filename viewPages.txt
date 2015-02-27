@@ -1,1 +1,93 @@
+查看github上的页面效果（把git页面地址复制到下面链接打开后的输入框中即可）
 http://htmlpreview.github.com/
+
+
+
+关于github的安装使用以及管理
+
+快速上手
+
+1. 安装msysgit.
+
+下载地址：
+
+http://code.google.com/p/msysgit/
+
+
+2. 安装最新版的TortoiseGit
+
+ 
+
+下载地址：
+
+http://code.google.com/p/tortoisegit/
+ 
+3. 配置TortoiseGit,在Setting-General-Msysgit中指定git.exe为msysgit安装目录下的\bin目录里的git.exe,另外External dll 为msysgit安装目录下的\mingw\bin;
+4. 打开TortoiseGit程序组中的Puttygen
+5. 鼠标点击"generate"，使用鼠标在空间面板中任意活动,产生你的Putty密钥,无需输入key passphrase,然后点击Save private key到本地.
+6. 从Puttygen中copy你的公钥，你的公钥是一个位于第一个文本域中的比较大的随机的字母数字串，它看起来如下:
+　　 ssh-rsa
+　　 AAAB3NzaC1yc2EAAAABJQAAAIBqFftopEl3HNQ+SUmh9dFW39+IYU1ZYLG04GU
+　　 Nh02DEbgKn9qaCJDjqCh9a7LO+oN6RjcWLIwaPPlwZI1w6el5WaZKeKEOtWqgQW+
+　　 trnLRijgF9sPRR7jweM13S8lnpSvCUQbPxUyaNHZkEmY2PI1BaANv3d9YGnnhbKXPz
+　　 m0rmQ== rsa-key-20091128
+7. 在GitHub中创建一个帐户，导航到Account settings，点击"ssh public keys", 把你在上面产生的公钥增加进去。
+ 8. 在GitHub中新建一个Repository-"yourproject"，进入你的Repository-"yourproject"
+9. 从你的Repository-"yourproject"库的主页顶部中，点击copy to clipboard 图标,你的Git地址看起来如下："git@github.com:yourname/yourproject.git"
+10. 在你的硬盘上为这个"yourproject"源码创建一个新目录, 点击右键选择"Git Clone...".
+11. 在URL中输入你在第8步中的URL clone地址.
+12. 选中"Load Putty Key" ,并选择你在第4步存储的私钥位置。
+13. 点击OK即可获取你的项目"yourproject"分支了。
+
+ 
+
+日常开发
+ 
+
+1.Git Commit 提交到本机。
+
+2.Push 提交到GitHub。
+ 
+ 
+如何在 GitHub 建立个人主页和项目演示页面
+1. GitHub 个人主页
+即别人可以通过 http://[用户名].github.com/ 访问到的二级域名页面。这个比较简单，只要在 GitHub 上建立一个名为 [用户名].github.com 的项目，把页面内容通过 Git 工具从本地推送上去即可。首次建立项目可能需要等一会（至多十分钟）才能访问，以后更新内容都可以立即刷新访问。
+
+ 
+
+2. GitHub 项目演示页面
+即别人可以通过 http://[用户名].github.com/[项目名] 访问到的项目演示页面。这比上一个稍微麻烦一点，需要多建立一个 gh-pages 分支。每次提交项目以后，把更新推送一份到这个分支即可。和个人主页一样，首次建立分支以后需要等一会（至多十分钟）才能访问，以后更新内容都可以立即刷新访问。
+
+因为我们在 GitHub 上建立项目，多数时候都只是做一个在线备份或者简单的分享，并不需要复杂的分支管理，所以时间长了就会觉得要多维护一个分支还是挺费事的。那有没有办法可以只维护一个分支也能够生成演示页面呢？当然是可以的，我们把默认的 master 分支删除，把 gh-pages 当成主分支，只维护这一个分支就好了嘛。
+
+Git如何进行分支管理？
+1、创建分支
+创建分支很简单：git branch <分支名>
+
+
+2、切换分支
+git checkout <分支名>
+该语句和上一个语句可以和起来用一个语句表示：git checkout -b <分支名>
+
+
+3、分支合并
+比如，如果要将开发中的分支（develop），合并到稳定分支（master），
+首先切换的master分支：git checkout master。
+然后执行合并操作：git merge develop。
+如果有冲突，会提示你，调用git status查看冲突文件。
+解决冲突，然后调用git add或git rm将解决后的文件暂存。
+所有冲突解决后，git commit 提交更改。
+
+4、分支衍合
+分支衍合和分支合并的差别在于，分支衍合不会保留合并的日志，不留痕迹，而 分支合并则会保留合并的日志。
+要将开发中的分支（develop），衍合到稳定分支（master）。
+首先切换的master分支：git checkout master。
+然后执行衍和操作：git rebase develop。
+如果有冲突，会提示你，调用git status查看冲突文件。
+解决冲突，然后调用git add或git rm将解决后的文件暂存。
+所有冲突解决后，git rebase --continue 提交更改。
+
+
+5、删除分支
+执行git branch -d <分支名>
+如果该分支没有合并到主分支会报错，可以用以下命令强制删除git branch -D <分支名>
