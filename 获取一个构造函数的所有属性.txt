@@ -1,0 +1,4 @@
+以数组为例，如何获取Array的属性呢？
+通过for(key in Array){console.log(key)}没法获取,不能获取构造函数的键值，除非先实例化才能获取
+
+此时可以通过Object.getOwnPropertyNames(Array)获取构造函数的额所有键值！
