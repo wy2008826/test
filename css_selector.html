@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器测试</title>
+	<style type="text/css">
+	.input_box{width:500px;border:1px solid red;margin:20px auto;padding:10px;}
+	.input_box label{line-height: 20px;}
+	.input_box input{height:20px;width:300px;border:1px solid #555;}
+	
+	.input_box input:enabled{background: #f3f3f3;}
+	.input_box input[type="text"]:disabled{background: #ff8888;}
+	.input_box input:focus{background: #ff99ff;}
+	
+	.input_box p:nth-child(2){background: #777;}
+
+	.input_box span:first-of-type{color:red;}
+	.input_box h1:last-of-type{color: green;}
+	
+	.summary{margin: 10px 100px 10px 10px;}
+	.summary li{margin:5px 0;}
+	.summary ul li span{margin:0 5px;background: #ff66aa;}
+	</style>
+</head>
+<body>
+	
+	<div class="input_box">
+		<p><label for="">文本框：</label><input type="text"></p>
+		<p><label for="">禁用框：</label><input disabled type="text"></p>
+		<p><label for=""></label><input type="text"></p>
+		<p><label for=""></label><input type="radio"></p>
+		<span>span first-of-type 选取第一个某种类型的元素</span>
+		<h1>h1 last-of-type 选取最后一个某种类型的元素</h1>
+	</div>
+
+	<div class="summary">
+		<h4>选择器分类：（伪类的使用极大的增强了选择器的功能）</h4>
+		<ul>
+			<li>1.通过id class 标签名<span>#id</span><span>.class</span><span>div,p</span></li>
+			<li>2.选取后代元素 <span>div p</span><span>div>p</span><span>div p:first-child</span><span>div p:nth-child(2)</span><span>div p:first-of-type</span><span>div p:nth-of-type(2)</span><span>div p</span></li>
+			<li>3.表单元素选取 <span>input:disabled</span><span>input:enabled</span><span>input:focus</span></li>
+			<li>4.根据属性进行选取<span>div p[attr^='val']</span><span>div p[attr$='lue']</span><span>div p[attr*='alu']</span><span>div p[attr='value']</span></li>
+		</ul>
+		
+	</div>
+</body>
+</html>
