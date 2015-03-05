@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin:0px;padding:0px;}
+		.test{width:400px;margin:50px auto;}
+		.test>p{line-height: 50px;border:1px solid red;margin-top: 10px;text-align: center;}
+		.test>p input[type="checkbox"]{height:20px;width:20px;vertical-align:middle;margin-left: 10px;}
+		.test>p input[type="radio"]{height:20px;width:20px;vertical-align:middle;}
+		
+		.test .p_box{display: box;display:-webkit-box;}
+		.test .p_box>span{display: block;box-flex:1;-webkit-box-flex:1;border:1px solid 
+			#ff44ff;}
+		.test .p_box>span.left{text-align: right;padding-right: 20px;}
+		.test .p_box>span.right{text-align: left;padding-left:20px;}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<p>左右布局的这里不做演示了，当checkbox radio在设定了高度后，不会自动垂直居中，需要设定vertical-align：middle属性</p>
+		<p><label for="">3245</label><input type="text"></p>
+		<p><label for="">3245</label><input type="radio"></p>
+		<p><label for="">3245</label><input type="checkbox"></p>
+		<p class="p_box">
+			<span class="left"><label for="">3245</label><input type="checkbox"></span>
+			<span class="right"><label for="">fevsfdgwf</label><input type="checkbox"></span>
+		</p>
+
+	</div>
+</body>
+</html>
