@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平柱状图</title>
+	<style type="text/css">
+	*{padding:0px;margin:0px;}
+	.hbar_test{border:1px solid red;width:500px;margin:50px auto;}
+	.hbar_test>p{line-height: 30px;}
+	.hbar_test>p>label:first-of-type{width:60px;display: inline-block;height:100%;border-right: 1px solid red;}
+	.hbar_test>p>span:last-child{margin-left: 10px;}
+	.hbar_test>p .mes_bar{display: inline-block;height:20px;width:0px;background: #ffaa66;position: relative;top:5px;/*background-image:-webkit-linear-gradient(right, red, rgb(0, 0, 255))*/ }
+	</style>
+	<script type="text/javascript" src="esayui/jquery.min.js"></script>
+</head>
+<body>
+	<div class="hbar_test">
+		<p><label for="">第一项</label><span class="mes_bar"></span><span>1321</span></p>
+		<p><label for="">第二项</label><span class="mes_bar"></span><span>156</span></p>
+		<p><label for="">第三项</label><span class="mes_bar"></span><span>444</span></p>
+		<p><label for="">第四项</label><span class="mes_bar"></span><span>194</span></p>
+		<p><label for="">第五项</label><span class="mes_bar"></span><span>22</span></p>
+		<p><label for="">第六项</label><span class="mes_bar"></span><span>499</span></p>
+	</div>
+	<script>
+	$(function(){
+		var num_lists=[];
+		var hbar_test=$(".hbar_test");
+		var max_width=hbar_test.width()-120;
+		var max_num=0;
+		hbar_test.find("p").find("span:last-child").each(function(index,elem){
+			num_lists.push({"index":index,"num":$(elem).text()});
+			max_num=Math.max($(elem).text(),max_num);
+
+		});
+		for(var i=0;i<num_lists.length;i++){
+			var bar_width=(num_lists[i]["num"]/max_num)*max_width;
+			hbar_test.find("p").eq(i).find(".mes_bar").animate({"width":bar_width},500);
+		}
+		console.log(max_num);
+	});
+	</script>
+
+</body>
+</html>
