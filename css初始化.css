@@ -1,6 +1,6 @@
-@charset "utf-8";*{margin:0;padding:0;font:14px Helvetica,\5FAE\8F6F\96C5\9ED1,\9ED1\4F53,\5b8b\4f53,Arial,sans-serif}
+@charset "utf-8";*{margin:0;padding:0;}
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-body{color:#100e0c;font:13px/1.5 \5FAE\8F6F\96C5\9ED1,\9ED1\4F53,\5b8b\4f53,Arial,Helvetica,sans-serif}
+body{color:#100e0c;font:14px Helvetica,\5FAE\8F6F\96C5\9ED1,\9ED1\4F53,\5b8b\4f53,Arial,sans-serif}
 body,html{width:100%;height:100%}
 table{border-collapse:collapse;border-spacing:0;}
 
