@@ -8,7 +8,7 @@
 	<style type="text/css">
 	.weixin_switch{height: 30px;width:50px;border-radius: 15px;position: relative;box-sizing:border-box;background:rgb(76,216,100);
 		}
-	.weixin_switch .switch{display: block;height: 28px;width:28px;border-radius: 14px;position: absolute;background: #fff;top:1px;
+	.weixin_switch .switch{display: block;height: 28px;width:28px;border-radius: 14px;position: absolute;background: #fff;top:1px;left: 1px;
 		box-sizing:border-box;}
 
 	.weixin_switch.on{background: #fff;border:0;
@@ -47,19 +47,19 @@
 	<script src="jquery.min.js"></script>
 </head>
 <body>
-	<div class="weixin_switch on">
+	<div class="weixin_switch">
 		<span class="switch"></span>
 	</div>
 	<script>
 	$(function(){
 		$(".weixin_switch").click(function(){
-			if($(this).hasClass("on")){
-				$(this).removeClass("on");
-				$(this).addClass("off");
+			if($(this).hasClass("off")){
+				$(this).removeClass("off");
+				$(this).addClass("on");
 			}
 			else{
-				$(this).addClass("on");
-				$(this).removeClass("off");
+				$(this).addClass("off");
+				$(this).removeClass("on");
 			}
 		});
 	});
