@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,mininum-scale=1,maximum-scale=1,user-scaleable=no">
+	<title>手机端长按模拟</title>
+	<style type="text/css">
+	*{padding:0;margin:0;}
+	ul{list-style: none;}
+	ul li{background: #ccc;margin:10px;border: 1px solid #88aaff;height: 50px;line-height: 50px;text-indent: 10px;}
+	.back_top{position: fixed;bottom: 50px;right: 10px;height: 70px;width:50px;background: #999;border: 1px solid red;text-align: center;}
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+		<li>cnewihnrwoeirhakbf</li>
+	</ul>
+	<div class="back_top">
+		返回顶部
+	</div>
+
+	<script>
+	$(function(){
+		var back_top=$(".back_top")[0];
+		back_top.addEventListener("touchstart",startHandler);
+		back_top.addEventListener("touchmove",moveHandler);
+		back_top.addEventListener("touchend",endHandler);
+
+		var tapTime={
+			startTime:0,
+			stillTime:0
+		};
+		var longTapTime_define=300;
+		var interval=null;
+		function longTap(){
+			tapTime.stillTime=(new Date()).getTime();
+			if(tapTime.stillTime-tapTime.startTime>longTapTime_define){
+				$("body")[0].scrollTop-=10;
+			}
+			console.log(tapTime.stillTime-tapTime.startTime);
+		}
+
+		function startHandler(event){
+			if(interval!=null){
+				clearInterval(interval);
+			}
+			tapTime.startTime=(new Date()).getTime();
+			interval=setInterval(longTap,10);
+		}
+
+		function moveHandler(event){
+
+		}
+
+		//在鼠标抬起的时候判断是点击还是长按状态
+		function endHandler(event){
+			clearInterval(interval);
+			if(tapTime.stillTime-tapTime.startTime>=longTapTime_define){
+				return;
+			}
+			else{
+				$("body").animate({scrollTop:0},400);
+			}
+		}
+
+	});
+	</script>
+</body>
+</html>
