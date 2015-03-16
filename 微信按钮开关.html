@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta meta name="apple-mobile-web-app-capable" content="yes">
+	<title>类似微信按钮开关</title>
+	<style type="text/css">
+	.weixin_switch{height: 30px;width:50px;border-radius: 15px;position: relative;box-sizing:border-box;background:rgb(76,216,100);
+		}
+	.weixin_switch .switch{display: block;height: 28px;width:28px;border-radius: 14px;position: absolute;background: #fff;top:1px;
+		box-sizing:border-box;}
+
+	.weixin_switch.on{background: #fff;border:0;
+		-webkit-animation:switch_on 0.3s;
+		-webkit-animation-fill-mode:forwards;}
+	.weixin_switch.on .switch{border: 1px solid #e1e1e1;border:0;
+		-webkit-animation:switch_on_radius 0.3s;
+		-webkit-animation-fill-mode:forwards;}
+	
+	.weixin_switch.off{background: rgb(76,216,100);border:1px solid #e1e1e1;-webkit-animation:switch_off 0.3s;
+		-webkit-animation-fill-mode:forwards;}
+	.weixin_switch.off .switch{border: 1px solid #e1e1e1;top:0;
+		-webkit-animation:switch_off_radius 0.3s;
+		-webkit-animation-fill-mode:forwards;
+		}
+
+
+	@-webkit-keyframes switch_on{
+		0% {background: #fff;}
+		100% {background:rgb(76,216,100);}
+	}
+	@-webkit-keyframes switch_off{
+		0% {background:rgb(76,216,100);}
+		100% {background: #fff;}
+	}
+
+	@-webkit-keyframes switch_off_radius{
+		0% {left: 1px;}
+		100% {left:20px;}
+	}
+	@-webkit-keyframes switch_on_radius{
+		0% {left: 20px;}
+		100% {left:1px;}
+	}
+	</style>
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+	<div class="weixin_switch on">
+		<span class="switch"></span>
+	</div>
+	<script>
+	$(function(){
+		$(".weixin_switch").click(function(){
+			if($(this).hasClass("on")){
+				$(this).removeClass("on");
+				$(this).addClass("off");
+			}
+			else{
+				$(this).addClass("on");
+				$(this).removeClass("off");
+			}
+		});
+	});
+	</script>
+</body>
+</html>
