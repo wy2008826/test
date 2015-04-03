@@ -1,0 +1,26 @@
+form表单ajax提交格式以及注意事项
+
+1.以键值对的方式保存
+2.$.ajax中需要加入processData和contentType属性
+
+
+$("#file").change(function(){
+			
+			var formData=new FormData();
+			formData.append("a",123);
+			for(var i=0;i<this.files.length;i++){
+				formData.append("file",this.files[i]);
+			}
+			
+			$.ajax({
+				type:"POST",
+				url:"file.php",
+				data:formData,
+				processData: false,
+        contentType: false,
+				success:function(d){
+					console.log(d);
+				}
+			});
+			
+});
