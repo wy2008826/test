@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta meta name="apple-mobile-web-app-capable" content="yes">
+	<title>移动端原生滚动</title>
+	<style>
+	*{margin:0;padding:0;box-sizing:border-box;}
+	.full_width{border: 1px solid #f33;height: 400px;overflow: auto;}
+	.full_width::-webkit-scrollbar{width: 0;height: 0}
+	.full_width ul{height: 100%;list-style: none;width: 3000px;}
+	.full_width ul li{display:inline-block;height: 100%;width: 320px;border: 1px solid #33f;}
+	.full_width ul li:nth-child(1){background: #f36}
+	.full_width ul li:nth-child(2){background: #e45}
+	.full_width ul li:nth-child(3){background: #d54}
+	.full_width ul li:nth-child(4){background: #c63}
+	</style>
+</head>
+<body>
+	<div class="full_width">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>4</li>
+		</ul>
+	</div>
+</body>
+</html>
