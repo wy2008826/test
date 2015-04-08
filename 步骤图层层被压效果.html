@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta meta name="apple-mobile-web-app-capable" content="yes">
+	<title>步骤状态</title>
+	<style>
+	*{padding:0;margin:0;}
+	ul{list-style:none;}
+	.step_progress{height: 16px;margin:40px 0;position: relative;}
+	.step_progress ul{width: 100%;height: 100%;background: #fff;display: box;display:-webkit-box;border: 1px solid #d3d3d3;box-shadow: 0 3px rgb(185,185,185);position: relative;}
+	.step_progress ul li{box-flex:2;-webkit-box-flex:2;position: relative;height: 100%;z-index:1}
+	.step_progress ul li:nth-child(1){z-index:5}
+	.step_progress ul li:nth-child(2){z-index:4}
+	.step_progress ul li:nth-child(3){z-index:3}
+	.step_progress ul li:nth-child(4){z-index:2}
+
+	.step_progress ul li:first-child,.step_progress ul li:last-child{box-flex:1;-webkit-box-flex:1;}
+	
+	
+	.step_progress ul li >p{position: absolute;height:100%;width:0px;background: rgb(82,133,187);z-index:-2;}
+
+	.step_progress ul li>span{position: absolute;display: block;height: 40px;width: 40px;background: #fff;right: -20px;top:-12px;border: 1px solid #d3d3d3;border-radius: 6px;line-height: 40px;text-align: center;box-shadow: 2px 3px rgb(185,185,185);color:rgb(82,133,187); font-size: 22px;z-index: 15;}
+	.step_progress ul li>span:before{content: "";display: block;height: 16px;width: 1px;left:-1px;top:12px;background: #fff;position: absolute;}
+
+	.step_progress ul li.already p{width: 100%;}
+	.step_progress ul li.already span{background: rgb(82,133,187);color: #fff;}
+
+	.step_progress ul li.already span:before{background: rgb(82,133,187);}
+
+
+	/*动画效果*/
+	.step_progress ul li.latest p{animation:width 500ms;-webkit-animation:width 1s;}
+	.step_progress ul li.latest span{animation:color 500ms;-webkit-animation:color 1.2s;}
+	.step_progress ul li.latest span:before{animation:color 1s;-webkit-animation:color 1s;}
+
+	/*当第四个为已选择的时候后面条状的条状动画*/
+	.step_progress ul li.latest:nth-child(4)+li p{animation:width 500ms;-webkit-animation:width 0.6s linear 0.6s forwards;}
+
+
+	@keyframes width{
+		from{width: 0;}
+		to{width: 100%;}
+	}
+	@-webkit-keyframes width{
+		from{width: 0;}
+		to{width: 100%;}
+	}
+
+	@keyframes color{
+		from{background:#fff;}
+		to{background: rgb(82,133,187);}
+	}
+	@-webkit-keyframes color{
+		0% {background:#fff;color:rgb(82,133,187);}
+		40% {background:#fff;color:rgb(82,133,187); }
+		100%{background: rgb(82,133,187);}
+	}
+
+
+	</style>
+</head>
+<body>
+	<div class="step_progress">
+		<ul>
+			<li class="already">
+				<p></p>
+				<span>1</span>
+			</li>
+			<li class="already">
+				<p></p>
+				<span>2</span>
+			</li>
+			<li class="already latest">
+				<p></p>
+				<span>3</span>
+			</li>
+			<li class="">
+				<p></p>
+				<span>4</span>
+			</li>
+			<li>
+				<p></p>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
