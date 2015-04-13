@@ -15,19 +15,28 @@
 
 	.check_switch.on{background: #fff;border:0;
 		-webkit-animation:switch_on 0.3s;
-		-webkit-animation-fill-mode:forwards;}
+		-webkit-animation-fill-mode:forwards;
+		animation:switch_on 0.3s;
+		animation-fill-mode:forwards;}
 	.check_switch.on .switch{border: 1px solid #e1e1e1;border:0;
 		-webkit-animation:switch_on_radius 0.3s;
-		-webkit-animation-fill-mode:forwards;}
+		-webkit-animation-fill-mode:forwards;
+		animation:switch_on_radius 0.3s;
+		animation-fill-mode:forwards;}
 	.check_switch._on{background:rgb(76,216,100);border:0;}
 	.check_switch._on .switch{border: 1px solid #e1e1e1;border:0;left:1px;}
 
 
-	.check_switch.off{background: rgb(76,216,100);border:1px solid #e1e1e1;-webkit-animation:switch_off 0.3s;
-		-webkit-animation-fill-mode:forwards;}
+	.check_switch.off{background: rgb(76,216,100);border:1px solid #e1e1e1;
+		-webkit-animation:switch_off 0.3s;
+		-webkit-animation-fill-mode:forwards;
+		animation:switch_off 0.3s;
+		animation-fill-mode:forwards;}
 	.check_switch.off .switch{border: 1px solid #e1e1e1;top:0;
 		-webkit-animation:switch_off_radius 0.3s;
 		-webkit-animation-fill-mode:forwards;
+		animation:switch_off_radius 0.3s;
+		animation-fill-mode:forwards;
 		}
 	.check_switch._off{background:#fff;border:1px solid #e1e1e1;}
 	.check_switch._off .switch{border: 1px solid #e1e1e1;top:0;right:0px;}
@@ -37,7 +46,15 @@
 		0% {background: #fff;}
 		100% {background:rgb(76,216,100);}
 	}
+	@keyframes switch_on{
+		0% {background: #fff;}
+		100% {background:rgb(76,216,100);}
+	}
 	@-webkit-keyframes switch_off{
+		0% {background:rgb(76,216,100);}
+		100% {background: #fff;}
+	}
+	@keyframes switch_off{
 		0% {background:rgb(76,216,100);}
 		100% {background: #fff;}
 	}
@@ -46,7 +63,15 @@
 		0% {left: 1px;}
 		100% {left:20px;}
 	}
+	@keyframes switch_off_radius{
+		0% {left: 1px;}
+		100% {left:20px;}
+	}
 	@-webkit-keyframes switch_on_radius{
+		0% {left: 20px;}
+		100% {left:1px;}
+	}
+	@keyframes switch_on_radius{
 		0% {left: 20px;}
 		100% {left:1px;}
 	}
