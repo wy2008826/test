@@ -6,24 +6,31 @@
 	<meta meta name="apple-mobile-web-app-capable" content="yes">
 	<title>类似微信按钮开关</title>
 	<style type="text/css">
-	.weixin_switch{height: 30px;width:50px;border-radius: 15px;position: relative;box-sizing:border-box;background:rgb(76,216,100);
+	.check_switch{display: inline-block;height: 30px;width:50px;border-radius: 15px;position: relative;box-sizing:border-box;
 		}
-	.weixin_switch .switch{display: block;height: 28px;width:28px;border-radius: 14px;position: absolute;background: #fff;top:1px;left: 1px;
-		box-sizing:border-box;}
+	.check_switch._on{background: rgb(76,216,100);}
+	.check_switch._off{background: #fff;border:1px solid #e1e1e1;}
 
-	.weixin_switch.on{background: #fff;border:0;
+	.check_switch .switch{display: block;height: 28px;width:28px;border-radius: 14px;position: absolute;background: #fff;top:1px;box-sizing:border-box;}
+
+	.check_switch.on{background: #fff;border:0;
 		-webkit-animation:switch_on 0.3s;
 		-webkit-animation-fill-mode:forwards;}
-	.weixin_switch.on .switch{border: 1px solid #e1e1e1;border:0;
+	.check_switch.on .switch{border: 1px solid #e1e1e1;border:0;
 		-webkit-animation:switch_on_radius 0.3s;
 		-webkit-animation-fill-mode:forwards;}
-	
-	.weixin_switch.off{background: rgb(76,216,100);border:1px solid #e1e1e1;-webkit-animation:switch_off 0.3s;
+	.check_switch._on{background:rgb(76,216,100);border:0;}
+	.check_switch._on .switch{border: 1px solid #e1e1e1;border:0;left:1px;}
+
+
+	.check_switch.off{background: rgb(76,216,100);border:1px solid #e1e1e1;-webkit-animation:switch_off 0.3s;
 		-webkit-animation-fill-mode:forwards;}
-	.weixin_switch.off .switch{border: 1px solid #e1e1e1;top:0;
+	.check_switch.off .switch{border: 1px solid #e1e1e1;top:0;
 		-webkit-animation:switch_off_radius 0.3s;
 		-webkit-animation-fill-mode:forwards;
 		}
+	.check_switch._off{background:#fff;border:1px solid #e1e1e1;}
+	.check_switch._off .switch{border: 1px solid #e1e1e1;top:0;right:0px;}
 
 
 	@-webkit-keyframes switch_on{
@@ -47,19 +54,20 @@
 	<script src="jquery.min.js"></script>
 </head>
 <body>
-	<div class="weixin_switch">
-		<span class="switch"></span>
+	<div class="check_switch _on">
+		<span class="switch "></span>
+	</div>
+	<div class="check_switch _off">
+		<span class="switch "></span>
 	</div>
 	<script>
 	$(function(){
-		$(".weixin_switch").click(function(){
-			if($(this).hasClass("off")){
-				$(this).removeClass("off");
-				$(this).addClass("on");
+		$(".check_switch").click(function(){
+			if($(this).hasClass("_off")||$(this).hasClass("off")){
+				$(this).removeClass("off").removeClass("_off").addClass("on");
 			}
-			else{
-				$(this).addClass("off");
-				$(this).removeClass("on");
+			else if($(this).hasClass("_on")||$(this).hasClass("on")){
+				$(this).removeClass("on").removeClass("_on").addClass("off");
 			}
 		});
 	});
