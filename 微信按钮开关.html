@@ -6,13 +6,11 @@
 	<meta meta name="apple-mobile-web-app-capable" content="yes">
 	<title>类似微信按钮开关</title>
 	<style type="text/css">
-	.check_switch{display: inline-block;height: 30px;width:50px;border-radius: 15px;position: relative;box-sizing:border-box;
-		}
-	.check_switch._on{background: rgb(76,216,100);}
-	.check_switch._off{background: #fff;border:1px solid #e1e1e1;}
-
-	.check_switch .switch{display: block;height: 28px;width:28px;border-radius: 14px;position: absolute;background: #fff;top:1px;box-sizing:border-box;}
-
+	.check_switch{display: inline-block;height: 26px;width:60px;border-radius: 13px;position: relative;box-sizing:border-box;}
+	.check_switch .switch{display: block;height: 24px;width:24px;border-radius: 12px;position: absolute;background: #fff;top:1px;box-sizing:border-box;}
+	.check_switch .switch_mes{font-size: 12px;position: absolute;display: block;height: 24px;line-height: 24px;width:32px;top:0;text-align: center;margin-left: 2px;}
+	.check_switch .switch_mes:after{content: "启用";color: #aaa;}
+	
 	.check_switch.on{background: #fff;border:0;
 		-webkit-animation:switch_on 0.3s;
 		-webkit-animation-fill-mode:forwards;
@@ -23,9 +21,12 @@
 		-webkit-animation-fill-mode:forwards;
 		animation:switch_on_radius 0.3s;
 		animation-fill-mode:forwards;}
+
+
 	.check_switch._on{background:rgb(76,216,100);border:0;}
 	.check_switch._on .switch{border: 1px solid #e1e1e1;border:0;left:1px;}
-
+	.check_switch._on .switch_mes,.check_switch.on .switch_mes{right:2px;}
+	.check_switch._on .switch_mes:after,.check_switch.on .switch_mes:after{content:"禁用";color: #fff;}
 
 	.check_switch.off{background: rgb(76,216,100);border:1px solid #e1e1e1;
 		-webkit-animation:switch_off 0.3s;
@@ -61,28 +62,30 @@
 
 	@-webkit-keyframes switch_off_radius{
 		0% {left: 1px;}
-		100% {left:20px;}
+		100% {left:34px;}
 	}
 	@keyframes switch_off_radius{
 		0% {left: 1px;}
-		100% {left:20px;}
+		100% {left:34px;}
 	}
 	@-webkit-keyframes switch_on_radius{
-		0% {left: 20px;}
+		0% {left: 34px;}
 		100% {left:1px;}
 	}
 	@keyframes switch_on_radius{
-		0% {left: 20px;}
+		0% {left: 34px;}
 		100% {left:1px;}
 	}
 	</style>
 	<script src="jquery.min.js"></script>
 </head>
 <body>
-	<div class="check_switch _on">
+	<span class="check_switch _on">
+		<span class="switch_mes"></span>
 		<span class="switch "></span>
-	</div>
+	</span>
 	<div class="check_switch _off">
+		<span class="switch_mes"></span>
 		<span class="switch "></span>
 	</div>
 	<script>
