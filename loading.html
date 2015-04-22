@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding:0;margin:0;}
+		.circle_half_loading{position: relative;height:60px; width:60px;}
+		.circle_half_loading .test{margin:30px auto;height:100%; width:100%;border:2px solid #f33;box-sizing:border-box;border-radius: 50%;border-right-color:transparent;border-left-color:transparent;-webkit-animation:circle_loading 0.9s linear  infinite;animation:circle_loading 0.9s linear  infinite;}
+
+			@-webkit-keyframes circle_loading{
+				0%{transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+				100%{transform:rotate(360deg);-webkit-transform:rotate(360deg);}
+			}
+			@keyframes circle_loading{
+				0%{transform:rotate(0deg);}
+				100%{transform:rotate(360deg);}
+			}
+
+
+
+		.circle_half_loading .loading_test{position: absolute;height: 100%;width: 100%;top:0;left:0;text-align: center;font-size: 12px;line-height: 60px;color: #f33;
+			-webkit-animation:text_shade 1s linear  infinite;
+			animation:text_shade 1s linear  infinite;}
+		
+		@-webkit-keyframes text_shade{
+			0%{transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+			20%{transform:rotate(-20deg);-webkit-transform:rotate(-20deg);}
+			80%{transform:rotate(20deg);-webkit-transform:rotate(20deg);}
+			100%{transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+		}
+		@keyframes text_shade{
+			0%{transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+			25%{transform:rotate(-30deg);-webkit-transform:rotate(-30deg);}
+			75%{transform:rotate(30deg);-webkit-transform:rotate(30deg);}
+			100%{transform:rotate(0deg);-webkit-transform:rotate(0deg);}
+		}
+		
+
+
+		
+	</style>
+</head>
+<body>
+	<div class="circle_half_loading">
+		<div class="test"></div>
+		<div class="loading_test">加载中</div>
+	</div>
+	
+
+	
+</body>
+</html>
