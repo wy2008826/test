@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#select{width: 100px;}
+	</style>
+</head>
+<body>
+  <p>下拉列表的multiple属性可以实现多选功能，监听option的selected属性，可以知道选了哪些选项！</p>
+	<select name="" id="select" multiple="multiple">
+		<option value="123">123</option>
+		<option  value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+	</select>
+	<script>
+	var select=document.getElementById("select");
+	var options=select.getElementsByTagName("option");
+
+	select.onchange=function(){
+		for(var i=0;i<options.length;i++){
+			if(options[i].selected){
+				console.log(options[i]);
+			}
+			console.log(options[i]);
+		}
+		
+	}
+
+	
+	</script>
+</body>
+</html>
