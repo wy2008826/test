@@ -21,6 +21,22 @@
 	var people=new Human();
 	people.func1();//A
 	people.key2.b();//Object {a: 1, b: function}
+	
+	
+	var color="red";
+	var a={"color":"blue"};
+	var b={"color":"green","b":{"color":"yellow"}};
+	function saycolor(){
+		console.log(this.color);
+	}
+	saycolor();
+	a.saycolor=saycolor;
+	a.saycolor();
+	b.b.saycolor=saycolor;
+	b.b.saycolor();
+		
+		
+		
 	</script>
 </body>
 </html>
