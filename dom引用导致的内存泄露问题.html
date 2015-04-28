@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this测试</title>
+</head>
+<body>
+	<div>
+    <div id="container">
+        <h1 id="heading">I am just a heading nothing much</h1>
+    </div>
+</div>
+
+<script>
+	var parentEle = document.getElementById('container'); //get parent ele reference 得到父元素的引用
+ 
+	var headingEle = document.getElementById('heading'); //get child ele reference 得到子元素的引用
+	 
+	parentEle.remove(); //removes parent element from DOM 从DOM中移除父元素
+	 
+	//but its child ref still exist, So parentEle won't collect GC'd and causes DOM Leak
+	//但是它的子元素引用仍然存在，所以parentEle不会被GC回收，因此导致了DOM泄漏。
+
+
+	//将它的引用设置为null即可修复DOM泄漏。
+
+	headingEle = null; //Now parentEle will be GC'd
+
+</script>
+
+</body>
+</html>
