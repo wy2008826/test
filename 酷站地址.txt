@@ -6,3 +6,4 @@
 
 
 5.http://blog.jobbole.com/70907/ 路由器探测工具，以及详细使用教程
+6.http://www.cnblogs.com/TankXiao/archive/2012/10/10/2711777.html 探测工具的详细使用教程
