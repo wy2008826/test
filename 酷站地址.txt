@@ -3,3 +3,6 @@
 2.http://www.lanrenzhijia.com/js/css3
 3.http://www.jq22.com/
 4.http://demo.mobiscroll.com/datetime/datetime/ 手机端日历插件集合 相当不错额
+
+
+5.http://blog.jobbole.com/70907/ 路由器探测工具，以及详细使用教程
