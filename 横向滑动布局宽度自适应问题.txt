@@ -1,0 +1,21 @@
+<div class="img_lists" id="wrapper">
+	<ul>
+		<li>
+			<img class="img_item" src="images/img_1.png" alt="">
+			<span class="del">删除</span>
+		</li>
+		<li>
+			<img class="img_item" src="images/img_2.jpg" alt="">
+			<span class="del">删除</span>
+		</li>
+		<li>
+			<img class="img_item" src="images/img_3.jpg" alt="">
+			<span class="del">删除</span>
+		</li>
+		<li>
+			<img class="img_item" src="images/img_4.jpg" alt="">
+			<span class="del">删除</span>
+		</li>
+
+	</ul>
+</div>
