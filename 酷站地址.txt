@@ -9,3 +9,4 @@
 6.http://www.cnblogs.com/TankXiao/archive/2012/10/10/2711777.html 探测工具的详细使用教程
 7.http://www.360doc.com/content/14/0414/15/14416931_368816305.shtml    angulartjs详细学习地址
 8.http://www.ituring.com.cn/minibook/303    angulartjs详细学习地址
+9.http://damoqiongqiu.iteye.com/blog/1917971   angulartjs详细学习地址
