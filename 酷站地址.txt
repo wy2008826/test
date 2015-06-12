@@ -11,3 +11,5 @@
 8.http://www.ituring.com.cn/minibook/303    angulartjs详细学习地址
 9.http://damoqiongqiu.iteye.com/blog/1917971   angulartjs详细学习地址
 10.https://gitcafe.com/Angularjs/Angularjs-Developer-Guide/blob/master/AngularJS%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%9701%EF%BC%9AAngularJS%E7%AE%80%E4%BB%8B.md      angularjs学习地址
+
+11.http://blog.csdn.net/yy374864125/article/details/41349417 angularjs学习地址
