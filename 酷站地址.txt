@@ -16,3 +16,6 @@
 
 
 12。http://www.cnblogs.com/Wayou/p/jquery_plugin_tutorial.html  jquery插件开发教程
+
+
+13.http://es6.ruanyifeng.com/#README  ECMAScript 6 学习地址
