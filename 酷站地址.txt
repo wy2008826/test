@@ -7,15 +7,17 @@
 
 5.http://blog.jobbole.com/70907/ 路由器探测工具，以及详细使用教程
 6.http://www.cnblogs.com/TankXiao/archive/2012/10/10/2711777.html 探测工具的详细使用教程
+
+
 7.http://www.360doc.com/content/14/0414/15/14416931_368816305.shtml    angulartjs详细学习地址
 8.http://www.ituring.com.cn/minibook/303    angulartjs详细学习地址
 9.http://damoqiongqiu.iteye.com/blog/1917971   angulartjs详细学习地址
 10.https://gitcafe.com/Angularjs/Angularjs-Developer-Guide/blob/master/AngularJS%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%9701%EF%BC%9AAngularJS%E7%AE%80%E4%BB%8B.md      angularjs学习地址
-
 11.http://blog.csdn.net/yy374864125/article/details/41349417 angularjs学习地址
 
 
 12。http://www.cnblogs.com/Wayou/p/jquery_plugin_tutorial.html  jquery插件开发教程
-
-
 13.http://es6.ruanyifeng.com/#README  ECMAScript 6 学习地址
+
+
+14.http://www.dowebok.com/demo/2014/77/    全屏网站模板以及动效展示
