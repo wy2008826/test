@@ -21,3 +21,7 @@
 
 
 14.http://www.dowebok.com/demo/2014/77/    全屏网站模板以及动效展示
+
+
+
+15 http://www.douban.com/note/163291324/   ie兼容性问题
