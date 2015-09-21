@@ -22,7 +22,21 @@
 	people.func1();//A
 	people.key2.b();//Object {a: 1, b: function}
 	
-	
+	Human();//函数单独执行
+	console.log(this.key1);
+
+
+	//函数嵌套函数的情况  也会将变量添加到window全局上面
+	function outer(){
+		function inner(){
+			this.inner="inner";
+		}
+		inner();
+	}
+	outer();
+	console.log(this.inner);
+
+
 	var color="red";
 	var a={"color":"blue"};
 	var b={"color":"green","b":{"color":"yellow"}};
