@@ -30,13 +30,13 @@
 		console.log(this.color);
 	}
 	saycolor();
-	a.saycolor=saycolor;
-	a.saycolor();
-	b.b.saycolor=saycolor;
-	b.b.saycolor();
-		
-		
-		
+	a.saycolor=saycolor;//此处知识挂载函数  this并没有定向  
+	a.saycolor();//执行的时候指向了调用的对象
+	b.b.saycolor=saycolor;//此处知识挂载函数  this并没有定向  
+	b.b.saycolor();//执行的时候指向了调用的对象
+	b.b.saycolor.apply(this);
+	// 单独的function执行的时候 为什么内部this会指向window？ 因为没有调用者
+	
 	</script>
 </body>
 </html>
