@@ -4,7 +4,7 @@ icon字体 ：https://icomoon.io/
 1.https://css-tricks.com/   css的前沿知识
 2.https://www.coursera.org 一个国外的各种教程  包括算法、语言、计算机基础知识等  不限于前端
 3.http://www.lynda.com/   一个国外的教程网站   都是视频类的   种类很多
-
+4.http://weekly.manong.io/issues/    码农周刊  一个资源很丰富的网站
 
 
 1.http://www.jqshare.com/Cool.html
