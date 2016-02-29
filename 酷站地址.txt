@@ -56,6 +56,8 @@ B:	react   spa等前沿技术   不刷新浏览器  更改页面的状态
 	同时可以通过前进后退  实现页面的正常跳转
 	浏览器缓存特定的文件
 	页面高清适配
-
+	页面加载和跳转的转场动画
 	
+
 1.卖座电影   http://m.maizuo.com/v4/
+2.房金所     https://fangjs.sina.com.cn/mobile/
