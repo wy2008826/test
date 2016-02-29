@@ -45,3 +45,12 @@ icon字体 ：https://icomoon.io/
 UI
 1.bootstrap 英文官网找不到
 1.amaze ui  http://amazeui.org/widgets
+
+
+比较好的移动端网站
+A：自适应页面
+1.典典当车 https://m.lechebang.com/webapp
+
+
+B:react   spa等前沿技术   不刷新浏览器  更改页面的状态   同时可以通过前进后退  实现页面的正常跳转
+1.卖座电影   http://m.maizuo.com/v4/
