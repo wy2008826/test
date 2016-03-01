@@ -48,6 +48,8 @@ UI
 
 
 比较好的移动端网站
+
+
 A：自适应页面
 1.典典当车 https://m.lechebang.com/webapp
 
@@ -61,3 +63,8 @@ B:	react   spa等前沿技术   不刷新浏览器  更改页面的状态
 
 1.卖座电影   http://m.maizuo.com/v4/
 2.房金所     https://fangjs.sina.com.cn/mobile/
+
+
+C:混合App   hybrid app
+
+1.携程app
